@@ -1,0 +1,24 @@
+/*
+PALETA DE CORES:
+eaceda
+EBEBF2
+E6AF2E
+191308
+726E97
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+:root {
+    --rosaClaro: #EACEDA;
+    --cinzaClaro: #EBEBF2;
+    --dourado: #E6AF2E;
+    --marromEscuro: #191308;
+    --lilas: #726E97;
+}
+body {
+    background-color: var(--cinzaClaro);
+    width: 100vw;
+    height: 100%;
+}
