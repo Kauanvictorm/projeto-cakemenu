@@ -14,7 +14,69 @@
     body {
         background-color: #EACEDA;
     }
+
+    section {
+        width: 100%;
+        height: 100%;
+    }
+
+    div#container {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 30px;
+    }
+
+    div#titulo {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        font-size: 1.2em;
+    }
+
+    div#campo-informacoes {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    div.info-contato {
+        font-size: 0.7em;
+    }
+
+
+    form#formulario {
+        background-color: white;
+
+        input,
+        textarea {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    }
+
+    div#form-campo {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    div.campo-nome-email {
+        text-align: left;
+    }
+
+    textarea {
+        resize: none;
+    }
 </style>
+
 <body>
     <header>
         <nav id="navbar">
@@ -48,7 +110,42 @@
         </nav>
     </header>
     <section>
-        <h1>Contate-me</h1>
+        <div id="container">
+            <div id="titulo">
+                <h1>Contate-me</h1>
+            </div>
+            <div id="campo-informacoes">
+                <div class="info-contato">
+                    <h2>TEL: (xx) xxxxx-xxxx</h2>
+                </div>
+                <div class="info-contato">
+                    <h2>|</h2>
+                </div>
+                <div class="info-contato">
+                    <h2>emailparacontato@gmail.com</h2>
+                </div>
+            </div>
+            <form id="formulario">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit perferendis perspiciatis
+                    dignissimossdssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                    dolore.</p>
+                <div id="form-campo">
+                    <div class="campo-nome-email">
+                        <label for="nome">Nome</label><br>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="campo-nome-email">
+                        <label for="">Email</label><br>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="assunto">Assunto</label> <br>
+                    <textarea name="assunto" id="assunto" cols="50" rows="5"></textarea>
+                </div>
+            </form>
+        </div>
     </section>
     <footer>
         <p><span>Bolos da Lúcia</span>. Criado Por <span>Kauan Victor</span></p>
