@@ -7,6 +7,12 @@ PALETA DE CORES:
 #FFF7C9
 #CC8CB7
 #B384A3
+
+#e3c5d1
+#77878B
+#CFFFE5
+#F1D302
+#0B0A07
 */
 :root {
     --azulPastel: #E2FEFF;
@@ -22,16 +28,16 @@ PALETA DE CORES:
 }
 
 body {
-    background-color: var(--azulPastel);
+    background-color: #FFFFFF;
 }
 header {
     position: fixed;
     top: 0%;
     z-index: 10;
-    background-color: var(--azulPastel);
+    background-color: #FFFFFF;
     width: 100%;
     padding: 28px 0px;
-    border-bottom: 2px solid var(--marromPastel);
+    border-bottom: 2px solid #0B0A07;
 }
 
 #navbar {
@@ -43,7 +49,7 @@ header {
 
 #nav_logo {
     display: flex;
-    color: #000;
+    color: #0B0A07;
     font-size: 20px;
     padding-left: 10px;
 }
@@ -55,7 +61,7 @@ header {
 }
 
 .nav-item a {
-    color: #000;
+    color: #0B0A07;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -69,7 +75,7 @@ header {
 }
 
 .nav-sociais a {
-    color: #000;
+    color: #0B0A07;
     text-decoration: none;
     font-weight: 600;
     margin: 10px;
@@ -81,91 +87,145 @@ section {
     margin-top: 90px;
 }
 
-.conteudo {
-    display: flex;
-    justify-content: center;
-}
-
-.conteudo>.demo {
-    position: relative;
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--bege);
-    width: 100%;
-    height: 500px;
-    margin: 10px;
+    flex-direction: column;
 }
 
-.demo>img {
+.group-cake {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 600px;
+    margin-bottom: 50px;
+}
+.group-cake > div {
+    flex: 1;
+    max-width: 350px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #e3c5d1;
+}
+
+.cake-image img{
     width: 100%;
     height: 100%;
 }
 
-.demo>h2 {
-    color: var(--marromEscuro);
+
+.cake-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cake-info h2 {
+    color: #0B0A07;
     font-size: 27px;
+    padding-bottom: 10px;
 }
 
-.demo>a {
+.cake-info a {
     position: absolute;
-    top: 65%;
+    top: 70%;
     background-color: #f8f0f3;
-    color: var(--marromEscuro);
+    color: #0B0A07;
     font-weight: 600;
     padding: 10px 14px;
     border-radius: 12px;
-    box-shadow: 0px 0px 10px#c0a2af;
+    box-shadow: 0px 0px 10px #ccaeba9f;
     text-decoration: none;
+ 
 }
 
-.demo>a:hover {
-    background-color:   #f8f0f3;
-    transition: 0.2s;
-    padding: 15px 20px;
+.cake-info a:hover {
+    background-color: #ece7e9;
+    transition: 0.4s;
+    padding: 13px 17px;
 }
 
-div.slogan {
+.group-slogan {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--marromPastel);
+    width: 100%;
     height: 100px;
-    margin: 10px;
+    background-color: #77878B;
+    overflow: hidden;
+}
+.group-slogan::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, #CFFFE5,#F1D302);
+
+    animation: animate 3s linear infinite;
+}
+@keyframes animate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.group-slogan::after {
+    content: "";
+    position: absolute;
+    background-color: #77878B;
+    inset: 3px;
+    border-radius: inherit;
 }
 
-h2#frase {
-    font-weight: bolder;
+h3#slogan-text {
+    z-index: 10;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-div.img-links {
+.info-links {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-}
-
-.img-links div {
-    position: relative;
-    display: inline-block;
     width: 100%;
-    height: 500px;
-    margin: 10px;
+    height: 600px;
+    gap: 20px;
+    margin-top: 50px;
 }
 
-.img-links div>img {
+.link-card {
+    position: relative;
+    flex: 1;
+    max-width: 535px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.link-card > img {
     width: 100%;
     height: 100%;
 }
 
-.img-links a {
+.info-links a {
     position: absolute;
     z-index: 10;
-    top: 90%;
+    top: 80%;
     right: 10%;
     padding: 10px 14px;
     text-align: center;
-    background-color: var(--cinzaClaro);
+    background-color: #f8f0f3;
     color: var(--marromEscuro);
     font-weight: 600;
     text-decoration: none;
