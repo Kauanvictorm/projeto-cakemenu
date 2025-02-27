@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*
 PALETA DE CORES:
 #FFFFFF
@@ -14,7 +16,8 @@ PALETA DE CORES:
 #F1D302
 #0B0A07
 */
-:root {
+::root {
+    --font_pacifico: "Pacifico", serif;
     --azulPastel: #E2FEFF;
     --marromPastel: #B3AA7B;
     --bege: #FFF7C9;
@@ -30,6 +33,7 @@ PALETA DE CORES:
 body {
     background-color: #FFFFFF;
 }
+
 header {
     position: fixed;
     top: 0%;
@@ -104,7 +108,9 @@ section {
     height: 600px;
     margin-bottom: 50px;
 }
-.group-cake > div {
+
+.group-cake> div {
+    position: relative;
     flex: 1;
     max-width: 350px;
     height: 500px;
@@ -112,24 +118,28 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    background-color: #e3c5d1;
+    overflow: hidden;
 }
 
-.cake-image img{
+.cake-image img {
     width: 100%;
     height: 100%;
 }
 
-
 .cake-info {
+    background-color: #e3c5d1;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .cake-info h2 {
     color: #0B0A07;
     font-size: 27px;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     padding-bottom: 10px;
 }
 
@@ -138,12 +148,15 @@ section {
     top: 70%;
     background-color: #f8f0f3;
     color: #0B0A07;
-    font-weight: 600;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     padding: 10px 14px;
     border-radius: 12px;
     box-shadow: 0px 0px 10px #ccaeba9f;
     text-decoration: none;
- 
+
 }
 
 .cake-info a:hover {
@@ -151,6 +164,7 @@ section {
     transition: 0.4s;
     padding: 13px 17px;
 }
+
 
 .group-slogan {
     position: relative;
@@ -160,37 +174,91 @@ section {
     text-align: center;
     width: 100%;
     height: 100px;
-    background-color: #77878B;
+    background-color: #EBEBF2;
     overflow: hidden;
 }
+
+.slogan-text {
+    position: absolute;
+    z-index: 10;
+    color: #0B0A07;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideInOut 16s infinite;
+}
+
+.slogan-text:nth-child(1) {
+    animation-delay: 0s;
+
+}
+
+.slogan-text:nth-child(2) {
+    animation-delay: 4s;
+
+}
+
+.slogan-text:nth-child(3) {
+    animation-delay: 8s;
+
+}
+
+.slogan-text:nth-child(4) {
+    animation-delay: 12s;
+}
+
+@keyframes slideInOut {
+
+    0%,
+    10% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    50%,
+    60% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    65%,
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
 .group-slogan::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 200px;
-    background: linear-gradient(180deg, #CFFFE5,#F1D302);
-
-    animation: animate 3s linear infinite;
+    background: linear-gradient(90deg, #e0e0f0, #c2c2f1);
+    animation: animate 9s linear infinite;
 }
+
 @keyframes animate {
     100% {
         transform: rotate(360deg);
     }
 }
+
 .group-slogan::after {
     content: "";
     position: absolute;
-    background-color: #77878B;
+    background-color: #EBEBF2;
     inset: 3px;
     border-radius: inherit;
 }
 
-h3#slogan-text {
-    z-index: 10;
-    color: #FFFFFF;
-    font-size: 1.5em;
-    font-weight: bold;
-}
 
 .info-links {
     display: flex;
@@ -213,7 +281,8 @@ h3#slogan-text {
     justify-content: center;
 
 }
-.link-card > img {
+
+.link-card>img {
     width: 100%;
     height: 100%;
 }
@@ -225,9 +294,12 @@ h3#slogan-text {
     right: 10%;
     padding: 10px 14px;
     text-align: center;
-    background-color: #f8f0f3;
-    color: var(--marromEscuro);
-    font-weight: 600;
+    background-color: #FFFFFF;
+    color: #0B0A07;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -237,5 +309,5 @@ footer {
     margin-top: 10px;
     padding: 10px 0px;
     text-align: center;
-    border-top: 2px solid var(--marromEscuro);
+    border-top: 2px solid #0B0A07;
 }
