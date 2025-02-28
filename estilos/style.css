@@ -28,16 +28,19 @@ PALETA DE CORES:
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
 }
 
 header {
     position: fixed;
     top: 0%;
-    z-index: 10;
+    z-index: 11;
     background-color: #FFFFFF;
     width: 100%;
     padding: 28px 0px;
@@ -68,10 +71,14 @@ header {
     color: #0B0A07;
     text-align: center;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 1.2em;
+    font-weight: 100;
 }
-
+.nav-item a.ativo {
+    color: #000000bb;
+    text-decoration: 2px underline #0B0A07;
+    font-weight: 200;
+}
 #nav_redes {
     display: flex;
     gap: 4px;

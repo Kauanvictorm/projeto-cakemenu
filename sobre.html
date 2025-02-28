@@ -10,55 +10,56 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-    <style>
-        body {
-            background-color: #FFFFFF;
-        }
-        section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-        }
-        div.container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        div.container > div {
-            padding: 10px;
-            margin-bottom: 30px;
-        }
-        div#titulo {
-            border-bottom: 1px solid #191308;
-        }
-        h1 {
-            font-size: 2em;
-        }
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        h2 {
-            font-size: 1em;
-        }
-        img {
+    .container>div {
+        padding: 10px;
+        margin-bottom: 30px;
+    }
 
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-        }
-        div#conteudo {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 20px;
-        }
-        p {
-            width: 50%;
-            height: 100%;
-        }
-    </style>
+    .title {
+        border-bottom: 1px solid #191308;
+    }
+
+    .title h1 {
+        font-size: 2em;
+    }
+
+    .caption h2 {
+        font-size: 1em;
+    }
+
+    .person-image img {
+
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+
+    .person-experiences {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .person-experiences p {
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 0.5px;
+        text-align: justify;
+        width: 40%;
+        height: 100%;
+    }
+</style>
+
 <body>
     <header>
         <nav id="navbar">
@@ -68,7 +69,7 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="sobre.html">Sobre</a>
+                    <a href="sobre.html" class="ativo">Sobre</a>
                 </li>
                 <li class="nav-item">
                     <a href="contato.html">Contato</a>
@@ -92,20 +93,33 @@
     </header>
     <section>
         <div class="container">
-            <div id="titulo">
+            <div class="title">
                 <h1>Quem sou</h1>
             </div>
-              <div id="subtitulo">
-                  <h2>CHEF, CONFEITEIRA CASEIRA, BLOGGER</h2>
-              </div>
-
-            <div id="personagem-img">
-                <img src="imagens/personagem.png" alt="confeiteiraLu">
+            <div class="caption">
+                <h2>CHEF, CONFEITEIRA CASEIRA, BLOGGER</h2>
             </div>
 
-            <div id="conteudo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, error molestiae! Ipsa sint earum molestiae facilis! Saepe sunt sapiente deleniti, ab numquam voluptatem aperiam quia. Officia deserunt ullam dolorem itaque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, quia labore cupiditate temporibus voluptas numquam veritatis dicta itaque saepe, ipsum esse quibusdam deleniti! Libero excepturi provident ipsa error possimus dolore?</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates voluptas libero ullam illo natus rerum minus fugit dolorem possimus dolore laboriosam unde reiciendis amet odit ad, laborum temporibus, aut vitae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quia libero quod asperiores quisquam aut consectetur dolorem fuga. Minima temporibus odit est veniam consequuntur corporis in et blanditiis quia at!</p>
+            <div class="person-image">
+                <img src="imagens/personagem.png" biografiaalt="confeiteiraLu">
+            </div>
+
+            <div class="person-experiences">
+                <p>Olá! Meu nome é Lúcia, mais conhecida como Lu, e atuo na confeitaria há mais de 8 anos. Minha jornada começou
+                    com pequenos pedidos para amigos e família, mas logo percebi que transformar ingredientes simples em
+                    bolos incríveis era minha verdadeira paixão.
+                </p>
+
+                <p>
+                    Ao longo dos anos, me especializei em bolos personalizados para casamentos, aniversários e eventos
+                    especiais. Fiz cursos de confeitaria, aprimorei técnicas e desenvolvi um estilo único, sempre unindo
+                    sabor e sofisticação.
+                </p>
+
+                <p>
+                    Hoje, com uma clientela fiel e diversas experiências no ramo, sigo inovando e criando bolos que não
+                    são apenas sobremesas, mas memórias inesquecíveis.
+                </p>
             </div>
         </div>
     </section>

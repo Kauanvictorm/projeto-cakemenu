@@ -11,13 +11,108 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-    body {
-        background-color: #FFFFFF;
+    .contato_container {
+        display: flex;
+        justify-content: center;
+    }
+    .content {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 80%;
+        height: 600px;
+        display: flex;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+
     }
 
-    section {
+    .contacts {
+        position: relative;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .contacts h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .contacts h2 {
+        font-size: 1.2em;
+    }
+    .contacts img {
+        position: absolute;
+        opacity: 0.1;
         width: 100%;
         height: 100%;
+    }
+    .form_box {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 3rem;
+    }
+    .form_header {
+        margin-bottom: 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .form_header p {
+        
+    }
+
+    .input_group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .input_box {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.1rem;
+    }
+    .input_box input {
+        margin: 0.6rem;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-bottom: thin solid black;
+    }
+    .input_box input:focus-visible {
+        outline: none;
+    }
+    .text_box {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.1rem;
+    }
+    .text_box input,
+    .text_box textarea {
+        margin: 0.6rem;
+        padding: 0.8rem 1.2rem;
+        border: none;
+        border-bottom: thin solid black;
+    }
+    .text_box input,
+    .text_box textarea:focus-visible {
+        outline: none;
+    }
+    .text_box textarea {
+        height: 50px;
+        resize: none;
+    }
+    .button_box {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .button_box button {
+        background-color: #ffff;
+        border: none;
+        padding: 15px;
     }
 </style>
 
@@ -34,7 +129,7 @@
                     <a href="sobre.html">Sobre</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contato.html">Contato</a>
+                    <a href="contato.html" class="ativo">Contato</a>
                 </li>
             </ul>
             <ul id="nav_redes">
@@ -54,6 +149,46 @@
         </nav>
     </header>
     <section>
+        <div class="contato_container">
+            <div class="content">
+                <div class="contacts">
+                    <h1>Contate-me</h1>
+                    <h2>TEL: (xx) xxxx-xxxx | info@bolosdalu.com.br</h2>
+                    <img src="imagens/bolochocolate.png" alt="bolo_chocolate">
+                </div>
+                <div class="form_box">
+                    <form action="#" method="get">
+                        <div class="form_header">
+                            <div class="form_paragraph">
+                                <p>Quer um bolo personalizado e delicioso para sua ocasião especial? Entre em contato conosco e solicite um orçamento! Trabalhamos com ingredientes de qualidade e todo o carinho para tornar seu momento ainda mais doce. Fale com a gente e vamos criar o bolo perfeito para você!</p>
+                            </div>
+                        </div>
+                        <div class="input_group">
+                            <div class="input_box">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+                            <div class="input_box">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+
+                        </div>
+                        <div class="text_box">
+                            <label for="subject">Assunto</label>
+                            <input type="text" name="subject" id="subject" required maxlength="80">
+                        </div>
+                        <div class="text_box">
+                            <label for="message">Deixe-nos uma mensagem...</label>
+                            <textarea name="message" id="message" required></textarea>
+                        </div>
+                        <div class="button_box">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <p><span>Bolos da Lúcia</span>. Criado Por <span>Kauan Victor</span></p>
