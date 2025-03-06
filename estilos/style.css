@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 /*
 PALETA DE CORES:
@@ -32,69 +33,76 @@ PALETA DE CORES:
 }
 
 body {
-    background-color: #FFFFFF;
+    background: linear-gradient(to right, #e4e4f0, #f1e5ea);
     width: 100%;
     height: 100%;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
-    top: 0%;
+    top: 0;
     z-index: 11;
-    background-color: #FFFFFF;
     width: 100%;
-    padding: 28px 0px;
-    border-bottom: 2px solid #0B0A07;
+    height: 80px;
+    background: linear-gradient(to right, #e4e4f0, #f1e5ea);
+    border-bottom: 1px solid #0B032D;
 }
 
 #navbar {
     display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    justify-content: space-between;
-    width: 95%;
+    width: 100%;
+    padding: 0px 10px;
 }
 
-#nav_logo {
-    display: flex;
-    color: #0B0A07;
-    font-size: 20px;
+.nav_logo {
+    display: inline-block;
+    color: #190933;
+    font-family: "Dancing Script", cursive;
+    font-size: 1.5em;
     padding-left: 10px;
 }
 
 #nav_menus {
     display: flex;
-    gap: 50px;
+    gap: 80px;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
     list-style: none;
 }
 
 .nav-item a {
-    color: #0B0A07;
+    color: #190933;
     text-align: center;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: 100;
 }
 .nav-item a.ativo {
-    color: #000000bb;
-    text-decoration: 2px underline #0B0A07;
+    color: #19093398;
     font-weight: 200;
 }
 #nav_redes {
     display: flex;
-    gap: 4px;
+    gap: 20px;
     list-style: none;
+    padding-right: 10px;
 }
 
 .nav-sociais a {
-    color: #0B0A07;
+    color: #190933;
     text-decoration: none;
     font-weight: 600;
-    margin: 10px;
 }
 
 section {
     width: 100%;
-    height: 100%;
     margin-top: 90px;
 }
 
@@ -103,6 +111,7 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .group-cake {
@@ -126,6 +135,7 @@ section {
     justify-content: center;
     text-align: center;
     overflow: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
 
 .cake-image img {
@@ -142,7 +152,7 @@ section {
 }
 
 .cake-info h2 {
-    color: #0B0A07;
+    color: #190933;
     font-size: 27px;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
@@ -154,7 +164,7 @@ section {
     position: absolute;
     top: 70%;
     background-color: #f8f0f3;
-    color: #0B0A07;
+    color: #190933;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -181,14 +191,14 @@ section {
     text-align: center;
     width: 100%;
     height: 100px;
-    background-color: #EBEBF2;
+    background-color: #dbdbf0;
     overflow: hidden;
 }
 
 .slogan-text {
     position: absolute;
     z-index: 10;
-    color: #0B0A07;
+    color: #190933;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -248,7 +258,7 @@ section {
     position: absolute;
     width: 100%;
     height: 200px;
-    background: linear-gradient(90deg, #e0e0f0, #c2c2f1);
+    background: linear-gradient(90deg, #cdcdee, #c2c2f1);
     animation: animate 9s linear infinite;
 }
 
@@ -261,7 +271,7 @@ section {
 .group-slogan::after {
     content: "";
     position: absolute;
-    background-color: #EBEBF2;
+    background-color: #dbdbf0;
     inset: 3px;
     border-radius: inherit;
 }
@@ -286,7 +296,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
 
 .link-card>img {
@@ -302,7 +312,7 @@ section {
     padding: 10px 14px;
     text-align: center;
     background-color: #FFFFFF;
-    color: #0B0A07;
+    color: #190933;
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -311,10 +321,22 @@ section {
 }
 
 footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
-    height: 20px;
+    height: 30px;
     margin-top: 10px;
     padding: 10px 0px;
-    text-align: center;
-    border-top: 2px solid #0B0A07;
+    color: #190933;
+    border-top: 1px solid #0B032D;
+}
+footer p > a {
+    font-weight: bold;
+    color: #190933;
+    text-decoration: none;
+}
+footer p > a:hover {
+    text-decoration: underline;
 }
